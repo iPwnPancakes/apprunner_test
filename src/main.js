@@ -13,7 +13,7 @@ const knexInstance = knex({
     user: 'postgres',
     password: 'password',
     database: 'ass',
-    ssl: false
+    ssl: { rejectUnauthorized: false }
   }
 });
 
