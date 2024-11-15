@@ -10,7 +10,7 @@ const knexInstance = knex({
     port: 5432,
     user: 'postgres',
     password: 'password',
-    database: 'ass',
+    database: 'eatmyass',
     ssl: { rejectUnauthorized: false }
   }
 });
