@@ -9,8 +9,8 @@ const knexInstance = knex({
     host: 'database-1.cbswyei8e50w.us-west-2.rds.amazonaws.com',
     port: 5432,
     user: 'postgres',
-    password: 'password',
-    database: 'eatmyass',
+    password: 'eatmyass',
+    database: 'ass',
     ssl: { rejectUnauthorized: false }
   }
 });
