@@ -26,12 +26,7 @@ app.get('/', (req, res) => {
 app.get('/fuck', async (req, res) => {
   console.log('before query');
 
-  try {
-    await knexInstance.raw('SELECT 1');
-  } catch (e) {
-    console.error(e);
-    throw e;
-  }
+  await knexInstance.raw('SELECT 1');
 
   console.log('after query');
 
