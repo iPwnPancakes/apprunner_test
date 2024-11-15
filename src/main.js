@@ -21,7 +21,7 @@ function sleep(ms) {
 async function example() {
   console.log('Start sleep');
 
-  await sleep(3000);
+  await sleep(300000);
 
   throw new Error('holy shmoley');
 }
