@@ -3,8 +3,6 @@ import knex from 'knex';
 
 const app = express();
 
-console.log('before knex instantiation I think');
-
 const knexInstance = knex({
   client: 'pg',
   connection: {
@@ -17,19 +15,17 @@ const knexInstance = knex({
   }
 });
 
-console.log('after knex instantiation');
-
 app.get('/', (req, res) => {
   res.end('Hello World');
 });
 
 app.get('/fuck', async (req, res) => {
   console.log('before query');
-
-  await knexInstance.raw('SELECT 1');
-
+  const results = await knexInstance.select('*').from('ass');
+  console.log(results);
   console.log('after query');
 
+  res.send('woooo').status(200);
 });
 
 app.get('/error', (req, res) => {
